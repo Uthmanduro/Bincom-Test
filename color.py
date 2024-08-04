@@ -15,8 +15,8 @@ all_colors = [color for day in data.values() for color in day]
 # Count the frequencies
 color_counts = Counter(all_colors)
 
-# Get the most common color
-most_common_color = color_counts.most_common(1)[0][0]
+# Get the most worn color
+most_worn_color = color_counts.most_common(1)[0][0]
 
 # Median color calculation
 sorted_colors = sorted(color_counts.items(), key=lambda item: item[1])
@@ -32,7 +32,7 @@ total_colors = sum(color_counts.values())
 red_count = color_counts.get('RED', 0)
 probability_red = red_count / total_colors
 
-print("Most common color:", most_common_color)
+print("Most worn color:", most_worn_color)
 print("Median color:", median_color)
 print("Variance of colors:", variance)
 print("Probability of red:", probability_red)
